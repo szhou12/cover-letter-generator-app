@@ -19,7 +19,13 @@ if selected_job_type in ["Others", "Intern"]:
 
 
 st.header('Company')
-company_name = st.text_input("Company Name:", placeholder="e.g. Google")
+company_name = st.text_input("Name:", placeholder="e.g. Google")
+company_brief = st.text_area("Brief Introduction:", height=100)
+
+st.header('Job Requirements')
+# Add a text area for users to type in job requirements
+job_responsibility = st.text_area("Responsibilities:", height=200)
+job_requirement = st.text_area("Requirements:", height=200)
 
 
 ## Read template
@@ -58,3 +64,6 @@ if selected_job_type and company_name:
     cover_letter_template = cover_letter_template + "\nShuyu Zhou"
 
     st.text_area("Content:", cover_letter_template, height=300)
+
+
+prompt_role = "Please act as an experienced hiring manager and help me improve my cover letter based on the company and job requirements."
