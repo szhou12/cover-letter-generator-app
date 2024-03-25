@@ -94,9 +94,12 @@ prompt_res = f"The job responsibilities are described as: {job_responsibility}"
 prompt_req = f"The job requirements are described as: {job_requirement}"
 
 ## Experience highlight prompt
-prompt_highlight = f"Based on the given information, please help me customize my cover letter provided below by highlighting my relevant experience in {selected_highlight_type}: \n{cover_letter_template}"
+prompt_highlight = f"Based on the given information, please help me customize my cover letter provided below in triple quotes. Remember to highlight my relevant experience in {selected_highlight_type}:"
 
-prompts = [prompt_role, prompt_basic_info, prompt_company_info, prompt_res, prompt_req, prompt_highlight]
+cover_letter = f"'''{{cover_letter_template}}'''"
+
+
+prompts = [prompt_role, prompt_basic_info, prompt_company_info, prompt_res, prompt_req, prompt_highlight, cover_letter]
 prompts = "\n".join(prompts)
 
 # if selected_job_type and company_name and company_brief and job_responsibility and job_requirement and selected_highlight_type:
