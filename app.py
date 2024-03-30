@@ -96,7 +96,7 @@ prompt_req = f"The job requirements are described as: {job_requirement}"
 ## Experience highlight prompt
 prompt_highlight = f"Based on the given information, please help me customize my cover letter provided below in triple quotes. Remember to highlight my relevant experience in {selected_highlight_type}:"
 
-cover_letter = f"'''{{cover_letter_template}}'''"
+cover_letter = f"'''\n{cover_letter_template}\n'''"
 
 
 prompts = [prompt_role, prompt_basic_info, prompt_company_info, prompt_res, prompt_req, prompt_highlight, cover_letter]
