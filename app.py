@@ -79,7 +79,7 @@ if selected_job_type and company_name:
 prompt_role = "Please act as an experienced hiring manager and help me improve my cover letter based on the company and job requirements."
 
 ## Emotional appeal
-emotional_appeal = "Your modification on my cover letter is very important as I totally depend on you to get this job!"
+emotional_appeal = "Your job is very important as I totally depend on your modification on my cover letter to get this job, which may change my whole life! "
 
 ## Company and job info prompt
 prompt_basic_info = f"I am applying for the [JOB POSITION] at {company_name}."
@@ -102,7 +102,15 @@ prompt_highlight = f"Based on the given information, please help me customize my
 cover_letter = f"'''\n{cover_letter_template}\n'''"
 
 
-prompts = [prompt_role, emotional_appeal, prompt_basic_info, prompt_company_info, prompt_res, prompt_req, prompt_highlight, cover_letter]
+prompts = [prompt_role, 
+           emotional_appeal, 
+           prompt_basic_info, 
+           prompt_company_info, 
+           prompt_res, 
+           prompt_req, 
+           prompt_highlight, 
+           cover_letter]
+
 prompts = "\n".join(prompts)
 
 # if selected_job_type and company_name and company_brief and job_responsibility and job_requirement and selected_highlight_type:
